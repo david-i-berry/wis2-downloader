@@ -37,7 +37,6 @@ def downloadWorker():
         output_path = Path(output_dir, dataid)
         # create directory
         output_path.parent.mkdir(exist_ok=True, parents=True)
-        print(output_path.parent)
         # find canonical in links
         for link in job['payload']['links']:
             if link['rel'] == "canonical":
